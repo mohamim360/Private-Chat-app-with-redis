@@ -79,7 +79,8 @@ const messages = new Elysia({ prefix: "/messages" })
 // API APP 
 
 const app = new Elysia({ prefix: "/api" })
-  .use(rooms); // Register room routes
+  .use(rooms)
+  .use(messages)// Register room routes
 
 export const GET = app.fetch;
 export const POST = app.fetch;
